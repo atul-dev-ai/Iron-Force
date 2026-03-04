@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON FORCE | Modern Gym</title>
+
+   <link rel="stylesheet" href="src/output.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .brand-font {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .neon-text {
+      text-shadow: 0 0 10px rgba(163, 230, 53, 0.5);
+    }
+
+    .neon-btn {
+      box-shadow: 0 0 15px rgba(163, 230, 53, 0.4);
+    }
+
+    .neon-border {
+      box-shadow: 0 0 10px rgba(163, 230, 53, 0.2);
+    }
+
+    .nav-link.active {
+      color: #a3e635;
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #a3e635;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#a3e635',
+            dark: '#020617',
+            darker: '#0f172a'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#020617] text-white overflow-x-hidden">
+
+  <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-[#020617]/90 backdrop-blur-md">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#home" class="flex items-center space-x-2">
+        <i class="fa-solid fa-dumbbell text-brand text-3xl"></i>
+        <span class="text-3xl font-bold brand-font tracking-wider text-white">IRON<span
+            class="text-brand">FORCE</span></span>
+      </a>
+
+      <div class="flex md:order-2 space-x-3 md:space-x-0">
+        <button
+          class="text-white bg-lime-50/20 cursor-pointer hover:bg-lime-500 font-bold px-6 py-2 uppercase tracking-wider transition-all transform hover:scale-105 neon-btn rounded-sm">
+          Join Now
+        </button>
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-400 rounded-lg md:hidden hover:bg-gray-800">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0 bg-gray-800 md:bg-transparent rounded-lg">
+          <li><a href="#home" class="nav-link active block py-2 px-3 text-white transition">Home</a></li>
+          <li><a href="#about" class="nav-link block py-2 px-3 text-white transition">About</a></li>
+          <li><a href="#plans" class="nav-link block py-2 px-3 text-white transition">Plans</a></li>
+          <li><a href="#trainers" class="nav-link block py-2 px-3 text-white transition">Trainers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"
+        class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+
+    <div class="relative z-10 text-center max-w-4xl px-4 mt-16">
+      <h3 class="text-brand font-bold tracking-[0.2em] uppercase mb-4 animate-pulse">Welcome to Iron Force</h3>
+      <h1 class="text-6xl md:text-8xl font-bold uppercase leading-tight mb-6 brand-font neon-text">
+        Build Your <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Dream
+          Body</span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+        Unleash your potential with state-of-the-art equipment, expert trainers, and a community that drives you
+        forward.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-brand text-white cursor-pointer px-8 py-4 font-bold uppercase tracking-widest hover:bg-lime-500 transition-all transform hover:-translate-y-1 neon-btn rounded-sm">Get
+          Started</button>
+        <button
+          class="border border-white cursor-pointer text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-[#020617] transition-all rounded-sm">View
+          Plans</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-[#020617] relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="grid grid-cols-2 gap-4">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop"
+          class="rounded-lg shadow-lg hover:scale-105 transition duration-500 object-cover h-64 w-full border border-white/10">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop"
+          class="rounded-lg shadow-lg hover:scale-105 transition duration-500 object-cover h-64 w-full mt-8 border border-white/10">
+      </div>
+
+      <div>
+        <h3 class="text-brand font-bold uppercase tracking-widest mb-2">Who We Are</h3>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 brand-font uppercase">
+          Take Your Health <br> To <span class="text-brand neon-text">Next Level</span>
+        </h2>
+        <p class="text-gray-400 mb-6 leading-relaxed">
+          Iron Force isn't just a gym; it's a sanctuary for those who refuse to settle. We provide world-class
+          equipment, elite trainers, and a motivating atmosphere to help you crush your goals.
+        </p>
+
+        <div class="grid grid-cols-3 gap-6 mb-8 border-t border-b border-gray-800 py-6">
+          <div class="text-center">
+            <h4 class="text-3xl font-bold text-white brand-font">10+</h4>
+            <p class="text-xs text-gray-500 uppercase mt-1">Years Exp.</p>
+          </div>
+          <div class="text-center border-l border-gray-800">
+            <h4 class="text-3xl font-bold text-white brand-font">25+</h4>
+            <p class="text-xs text-gray-500 uppercase mt-1">Trainers</p>
+          </div>
+          <div class="text-center border-l border-gray-800">
+            <h4 class="text-3xl font-bold text-white brand-font">500+</h4>
+            <p class="text-xs text-gray-500 uppercase mt-1">Members</p>
+          </div>
+        </div>
+
+        <button
+          class="text-white border-b-2 border-brand pb-1 cursor-pointer hover:text-brand transition uppercase tracking-widest font-bold text-sm">
+          Learn More <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" class="py-20 bg-[#0f172a]">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+      <h3 class="text-brand font-bold uppercase tracking-widest mb-2">Pricing Plans</h3>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-10 brand-font uppercase">Choose Your <span
+          class="text-brand">Power</span></h2>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div
+          class="bg-[#020617] p-8 rounded-xl border border-gray-800 hover:border-brand transition-all duration-300 hover:-translate-y-2 group">
+          <h3 class="text-xl font-bold text-white uppercase brand-font mb-4">Basic</h3>
+          <div class="text-4xl font-bold text-white mb-6">1000৳ <span
+              class="text-sm text-gray-500 font-normal">/mo</span></div>
+          <ul class="text-left space-y-4 mb-8 text-gray-400">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Gym Access</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Locker Access</li>
+            <li class="flex items-center gap-3 text-gray-600"><i class="fa-solid fa-xmark"></i> Personal Trainer</li>
+          </ul>
+          <button
+            class="w-full cursor-pointer py-3 border border-gray-600 text-white rounded font-bold uppercase hover:bg-white hover:text-black transition">Select</button>
+        </div>
+
+        <div class="bg-[#1e293b] p-8 rounded-xl border-2 border-brand transform md:-translate-y-4 relative neon-border">
+          <div
+            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand text-white bg-gradient-to-tr from-pink-400 to-purple-700 px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">
+            Popular</div>
+          <h3 class="text-xl font-bold text-white uppercase brand-font mb-4">Standard</h3>
+          <div class="text-5xl font-bold text-brand mb-6 neon-text">2000৳ <span
+              class="text-sm text-white font-normal">/mo</span></div>
+          <ul class="text-left space-y-4 mb-8 text-gray-300">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Full Access</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Locker + Shower</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> General Support</li>
+          </ul>
+          <button
+            class="w-full cursor-pointer py-3 bg-brand text-black rounded font-bold uppercase hover:bg-lime-500 transition neon-btn">Join
+            Now</button>
+        </div>
+
+        <div
+          class="bg-[#020617] p-8 rounded-xl border border-gray-800 hover:border-brand transition-all duration-300 hover:-translate-y-2 group">
+          <h3 class="text-xl font-bold text-white uppercase brand-font mb-4">Premium</h3>
+          <div class="text-4xl font-bold text-white mb-6">3500৳ <span
+              class="text-sm text-gray-500 font-normal">/mo</span></div>
+          <ul class="text-left space-y-4 mb-8 text-gray-400">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> VIP Access</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Personal Trainer</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Diet Plan</li>
+          </ul>
+          <button
+            class="w-full cursor-pointer py-3 border border-gray-600 text-white rounded font-bold uppercase hover:bg-white hover:text-black transition">Select</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trainers" class="py-20 bg-[#020617] border-t border-white/5">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+      <h3 class="text-brand font-bold uppercase tracking-widest mb-2">Expert Team</h3>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-10 brand-font uppercase">Meet The <span
+          class="text-brand">Pros</span></h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group relative overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop"
+            class="w-full h-96 object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+          <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6 text-left">
+            <h4 class="text-2xl font-bold brand-font text-white">John Doe</h4>
+            <p class="text-brand text-sm uppercase font-bold">Strength Coach</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?q=80&w=800&auto=format&fit=crop"
+            class="w-full h-96 object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+          <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6 text-left">
+            <h4 class="text-2xl font-bold brand-font text-white">Sarah Smith</h4>
+            <p class="text-brand text-sm uppercase font-bold">Crossfit Expert</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=800&auto=format&fit=crop"
+            class="w-full h-96 object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+          <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6 text-left">
+            <h4 class="text-2xl font-bold brand-font text-white">Mike Tyson</h4>
+            <p class="text-brand text-sm uppercase font-bold">Boxing Trainer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#0f172a] border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="#" class="flex items-center space-x-2 mb-4">
+            <i class="fa-solid fa-dumbbell text-brand text-2xl"></i>
+            <span class="text-2xl font-bold brand-font tracking-wider text-white">IRON<span
+                class="text-brand">FORCE</span></span>
+          </a>
+          <p class="text-gray-400 max-w-sm">The best gym in the city with top-notch equipment and professional trainers
+            to help you achieve your fitness goals.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold uppercase mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#about" class="hover:text-brand transition">About Us</a></li>
+            <li><a href="#plans" class="hover:text-brand transition">Membership</a></li>
+            <li><a href="#trainers" class="hover:text-brand transition">Our Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold uppercase mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><i class="fa-solid fa-location-dot text-brand mr-2"></i> Dhaka, Bangladesh</li>
+            <li><i class="fa-solid fa-phone text-brand mr-2"></i> +880 123 456 789</li>
+            <li><i class="fa-solid fa-envelope text-brand mr-2"></i> info@ironforce.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        &copy; 2024 Iron Force Gym. All rights reserved. <a href="https://atulpaul.vercel.app" target="_blank" class="cursor-pointer bg-gradient-to-r from-slate-400 to-emerald-700 bg-clip-text text-transparent font-bold animate-pulse text-[18px]">Atul Paul</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+    const navbarMenu = document.getElementById('navbar-sticky');
+    toggleBtn.addEventListener('click', () => navbarMenu.classList.toggle('hidden'));
+
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll(".nav-link");
+    window.onscroll = () => {
+      var current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLi.forEach((li) => {
+        li.classList.remove("active");
+        if (li.getAttribute("href").includes(current)) {
+          li.classList.add("active");
+        }
+      });
+    };
+  </script>
+</body>
+
+</html>
