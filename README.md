@@ -55,11 +55,11 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/iron-force-gym.git](https://github.com/your-username/iron-force-gym.git)
+   git clone https://github.com/atul-dev-ai/Iron-Force.git
 
 2. Navigate to the folder:
    ```bash
-    cd iron-force-gym
+    cd Iron-force
 
 3. Launch:
    Simply open the `index.html` file in your browser. No backend server required!
